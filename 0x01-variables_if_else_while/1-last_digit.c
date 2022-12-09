@@ -3,7 +3,7 @@
 #include <time.h>
 /**
  * main -outputs random number to the variable n on execution
- *Return : return (0)
+ *Return : Return 0
  */
 int main(void)
 {
