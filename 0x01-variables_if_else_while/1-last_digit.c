@@ -2,8 +2,8 @@
 #include<stdio.h>
 #include <time.h>
 /**
- * main -outputs random number to the variable n on execution
- *Description: 'search for last digit of random number'
+ * main - outputs random number to the variable n on execution
+ *Description: 'Search for last digit of random number'
  *Return : 0
  */
 int main(void)
