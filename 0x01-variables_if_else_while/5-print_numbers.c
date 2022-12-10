@@ -11,4 +11,5 @@ while (digit < 10)
 printf("%d", digit);
 digit++;
 }
+return (0);
 }
