@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include<stdio.h>
 #include <time.h>
-*
+/**
  * main - prints random number
  *Description: 'Returns >5, zero or <6'
  * Return: 0
