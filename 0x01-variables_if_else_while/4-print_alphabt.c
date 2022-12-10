@@ -8,10 +8,10 @@ int main(void)
 char lower_case = 'a';
 for  (; lower_case <= 'z'; lower_case++)
 {
-if ( lower_case == 'e' || lower_case == 'q')
-    {
-    continue;
-    }
+if (lower_case == 'e' || lower_case == 'q')
+{
+continue;
+}
 putchar(lower_case);
 }
 putchar('\n');
