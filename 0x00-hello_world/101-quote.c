@@ -1,5 +1,5 @@
+#include <unistd.h>
 #include <stdio.h>
-#include <fcntl.h>
 /**
  * main -outputs a line with function write
  *
