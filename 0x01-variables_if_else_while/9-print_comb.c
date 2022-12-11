@@ -9,14 +9,14 @@ int main(void)
 int digit = '0';
 while (digit <= '9')
 {
-for (;digit<= '8'; digit ++)
-{
 putchar(digit);
+if (digit< '9')
+{
 putchar(44);
 putchar(32);
 }
-putchar(digit);
 digit++;
 }
+putchar('\n');
 return (0);
 }
