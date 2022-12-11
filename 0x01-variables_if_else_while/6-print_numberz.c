@@ -13,4 +13,5 @@ putchar(digit);
 digit++;
 }
 putchar('\n');
+return (0);
 }
