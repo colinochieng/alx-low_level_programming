@@ -12,7 +12,7 @@ int digit3;
 while (digit1 <= 9)
 {
 digit2 = digit1 + 1;
-while (digit2 <= 9)//
+while (digit2 <= 9)
 {
 digit3 = digit2 + 1;
 while (digit3 <= 9)
