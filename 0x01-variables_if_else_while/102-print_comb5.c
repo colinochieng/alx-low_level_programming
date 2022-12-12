@@ -19,7 +19,7 @@ int main(void)
 				l = j;
 				if (j > '1')
 					l = j + 1;
-				if (k=='2')
+				if (k >='2')
                    		        l=i;
 				if (i == '0' && k == '0' && j == '0')
 					l = '1';
