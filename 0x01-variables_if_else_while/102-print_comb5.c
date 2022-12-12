@@ -1,9 +1,7 @@
 #include <stdio.h>
 /**
- * main - Entry point
- * 
- * Description: 'the program's description'
- * 
+ * main - Outputs using while loop
+ * Description: 'outputs combinations of two two-digit numbers'
  * Return: Always 0 (Success)
  */
 int main(void)
