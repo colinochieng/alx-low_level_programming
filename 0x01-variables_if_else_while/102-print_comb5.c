@@ -1,15 +1,16 @@
 #include <stdio.h>
 /**
  * main - outputs combinations of two two-digit numbers
+ *
  * Description : 'use while loop for times and four intergers'
+ *
  * Returns : 0
  */
 int main(void)
 {
 	int i = '0';
 	int j, k, l;
-	while (i <= '9')
-		
+	while (i <= '9') 
 	{
 		j = '0';
 		while (j <= '9')
