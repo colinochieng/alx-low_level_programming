@@ -16,8 +16,10 @@ int main(void)
 			k = i;
 			while (k <= '9')
 			{
-				l = j+1;
-				 while (l <= '9')
+				l = j;
+				if (j > '0')
+					l = j + 1;
+				while (l <= '9')
 				{
 					putchar(i);
 					putchar(j);
