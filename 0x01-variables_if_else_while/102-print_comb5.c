@@ -11,14 +11,12 @@ int main(void)
 	while (i <= '9')
 	{
 		j = '0';
-		while (j <= '8')
+		while (j <= '9')
 		{
+			l = j + 1;
 			k = i;
 			while (k <= '9')
 			{
-				l = '0';
-				if (i=='0' && k =='0' && j =='0')
-                    			l='1';
 				while (l <= '9')
 				{
 					putchar(i);
@@ -26,17 +24,14 @@ int main(void)
 					putchar(' ');
 					putchar(k);
 					putchar(l);
-					if (i == '9' && j == '8' && k == '9' && l == '9')
-					{
-						putchar('\n');
-					}
-					else
+					if (i < '9' || j < '8' || k < '9' || l < '9')
 					{
 						putchar(',');
+						putchar(' ');
 					}
-					putchar(' ');
 					l++;
 				}
+				l = '0';
 				k++;
 			}
 			j++;
