@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- *  _isalpha - checks of alphabets
+ * _isalpha - checks of alphabets
  *
- *  Description: 'use if else statements
+ * Description: 'use if else statements
  *
- *  @c: paramater holding alphabets
+ * @c: paramater holding alphabets
  *
- *  Return: 0 or 1
+ * Return: 0 or 1
  */
 int _isalpha(int c)
 {
