@@ -6,7 +6,7 @@
  *
  * @c: paramater holding alphabets
  *
- * Return: 0, 1 or -1
+ * Return: 0 or 1
  */
 int _isalpha(int c)
 {
