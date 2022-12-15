@@ -21,9 +21,9 @@ second_num = value;
 
 if (value <= 4000000)
 {
-if (value%2 == 0)
+if (value % 2 == 0)
 {
-    sum = value + sum;
+sum = value + sum;
 }
 }
 
