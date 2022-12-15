@@ -13,7 +13,7 @@ int rate = 0;
 first_num = 0;
 second_num = 1;
 
-while (rate <= 4)
+while (rate <= 49)
 {
 value = first_num + second_num;
 printf("%lu", value);
