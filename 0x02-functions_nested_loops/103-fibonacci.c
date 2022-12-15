@@ -30,6 +30,6 @@ sum = value + sum;
 rate++;
 }
 printf("%lu", sum);
-
+putchar('\n');
 return (0);
 }
