@@ -29,6 +29,7 @@ putchar('\n');
 
 rate++;
 }
+putchar('\n');
 return (0);
 
 }
