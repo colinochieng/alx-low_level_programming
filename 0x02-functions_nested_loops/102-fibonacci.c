@@ -30,5 +30,6 @@ putchar('\n');
 
 rate++;
 }
+return (0);
 }
 
