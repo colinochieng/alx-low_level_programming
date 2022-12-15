@@ -16,7 +16,7 @@ second_num = 1;
 while (rate <= 97)
 {
 value = first_num + second_num;
-printf("%lu",value);
+printf("%lu", value);
 first_num = second_num;
 second_num = value;
 if (rate < 97)
