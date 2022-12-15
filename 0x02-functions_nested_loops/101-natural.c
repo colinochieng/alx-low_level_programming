@@ -9,13 +9,13 @@
 int main(void)
 {
 	int value = 0;
-	int value = 0;
+	int sum = 0;
 
 	while (value <= 1024)
 	{
 		if (value > 0)
 		{
-			if (value % 5 ==0 || value % 3 == 0)
+			if (value % 5 == 0 || value % 3 == 0)
 			{
 				sum = value + sum;
 			}
