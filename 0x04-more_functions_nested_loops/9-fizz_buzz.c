@@ -1,6 +1,11 @@
 #include <stdio.h>
+/**
+* main - ckecks for multiples of 3 and 5
+*
+*Return: 0
+*/
 
-int main (void)
+int main(void)
 {
 int i = 1;
 while (i <= 100)
