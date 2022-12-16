@@ -1,37 +1,45 @@
 #include <stdio.h>
 /**
-*main - prints the first 98 fibonaccis numbers
-*
-*Return: 0
+*main - prints out first 98
+*fibonacci suit numbers
+*Return: return 0
 */
-
 int main(void)
 {
-int  rate;
-unsigned long  first_num, second_num, value;
-rate = 0;
-first_num = 0;
-second_num = 1;
+int inc;
+unsigned long n1 = 0, n2 = 1, n3;
+unsigned long n1_h1, n1_h2, n2_h1, n2_h2;
+unsigned long h1, h2;
 
-while (rate <= 97)
+for (inc = 0; inc < 92; inc++)
 {
-value = first_num + second_num;
-printf("%lu", value);
-if (value > 1000000000)
-printf("0%lu", value);
-first_num = second_num;
-second_num = value;
-if (rate < 97)
-{
-putchar(',');
-putchar(' ');
+n3 = n1 + n2;
+printf("%lu, ", n3);
+n1 = n2;
+n2 = n3;
 }
-else
-putchar('\n');
+n1_h1 = n1 / 10000000000;
+n2_h1 = n2 / 10000000000;
+n1_h2 = n1 % 10000000000;
+n2_h2 = n2 % 10000000000;
+for (inc = 93; inc < 99; inc++)
+{
+h1 = n1_h1 + n2_h1;
+h2 = n1_h2 + n2_h2;
+if ((n1_h2 + n2_h2) > 9999999999)
+{
+h1 += 1;
+h2 %= 10000000000;
+}
+printf("%lu%lu", h1, h2);
+if (inc != 98)
+printf(", ");
 
-rate++;
+n1_h1 = n2_h1;
+n1_h2 = n2_h2;
+n2_h1 = h1;
+n2_h2 = h2;
 }
-putchar('\n');
+printf("\n");
 return (0);
-
 }
