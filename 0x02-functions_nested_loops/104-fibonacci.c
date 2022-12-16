@@ -34,7 +34,6 @@ putchar('0');
 
 rate++;
 }
-putchar('\n');
 return (0);
 
 }
