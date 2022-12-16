@@ -17,6 +17,8 @@ while (rate <= 97)
 {
 value = first_num + second_num;
 printf("%lu", value);
+if (value > 1000000000)
+printf("0%lu", value);
 first_num = second_num;
 second_num = value;
 if (rate < 97)
