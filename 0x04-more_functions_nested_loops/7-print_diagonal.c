@@ -13,18 +13,18 @@ int a, b;
 a = 0;
 if (n > 0)
 {
-while( a < n)
+while (a < n)
 {
 b = 0;
 while (b < n)
 {
 if (a == b)
 {
-putchar('\\');
+_putchar('\\');
 }
 else if (a > b)
 {
-putchar(' ');
+_putchar(' ');
 }
 else
 {
@@ -32,12 +32,12 @@ break;
 }
 b++;
 }
-putchar('\n');
+_putchar('\n');
 a++;
 }
 }
 else
 {
-    putchar('\n');
+_putchar('\n');
 }
 }
