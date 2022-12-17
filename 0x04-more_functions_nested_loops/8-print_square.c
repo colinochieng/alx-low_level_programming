@@ -2,7 +2,7 @@
 
 /**
  * print_square - output square
- * 
+ *
  * @size: parameter
  *
  * Return: no value
@@ -19,8 +19,8 @@ void print_square(int size)
 	height = 0;
 	while (height < size)
 	{
-		 width = 0; 
-		while ( width < size)
+		width = 0;
+		while (width < size)
 		{
 			_putchar('#');
 			 width++;
