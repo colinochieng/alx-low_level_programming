@@ -11,7 +11,7 @@ int main(void)
 	char word[8] = "_putchar";
 	int letter = 0;
 
-	while (letter < 9)
+	while (letter < 8)
 	{
 		_putchar(word[letter]);
 		letter++;
