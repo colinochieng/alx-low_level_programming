@@ -36,14 +36,13 @@ h2 = h2 % 10000000000;
 }
 printf("%lu%lu", h1, h2);
 if (rate != 98)
-putchar(',');
-putchar(' ');
+printf(", ");
 n1 = n3;
 n2 = n4;
 n3 = h1;
 n4 = h2;
 rate++;
 }
-putchar('\n');
+printf("\n");
 return (0);
 }
