@@ -14,9 +14,9 @@ for (j = 1; j <= size - i; j++)
 {
 _putchar(' ');
 }
-for (int j = 1; j <= i; j++)
+for (j = 1; j <= i; j++)
 {
-_putcha('#');
+_putchar('#');
 }
 _putchar('\n');
 }
