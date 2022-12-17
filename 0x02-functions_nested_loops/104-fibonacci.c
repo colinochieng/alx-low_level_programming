@@ -1,45 +1,51 @@
 #include <stdio.h>
-/**
-*main - prints the first 98 fibonaccis numbers
-*
-*Return: 0
-*/
 
+/**
+ * main - Prints the first 98 Fibonacci numbers, starting with
+ *        1 and 2, separated by a comma followed by a space.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-int  rate;
-unsigned long  first_num, second_num, value;
-rate = 0;
-first_num = 0;
-second_num = 1;
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
+	unsigned long half1, half2;
 
-while (rate <= 97)
-{
-value = first_num + second_num;
-first_num = second_num;
-second_num = value;
+	for (count = 0; count < 92; count++)
+	{
+		sum = fib1 + fib2;
+		printf("%lu, ", sum);
 
-if (rate < 93)
-{
-printf("%lu", value);
-putchar(',');
-putchar(' ');
-}
-if (rate >= 93 && rate <= 96)
-{
-putchar('0');
-printf("%lu", value);
-putchar(',');
-putchar(' ');
-}
-else if (rate == 97)
-{
-    putchar('0');
-    printf("%lu", value);
-    putchar('\n');
-}
-rate++;
-}
-return (0);
+		fib1 = fib2;
+		fib2 = sum;
+	}
 
+	fib1_half1 = fib1 / 10000000000;
+	fib2_half1 = fib2 / 10000000000;
+	fib1_half2 = fib1 % 10000000000;
+	fib2_half2 = fib2 % 10000000000;
+
+	for (count = 93; count < 99; count++)
+	{
+		half1 = fib1_half1 + fib2_half1;
+		half2 = fib1_half2 + fib2_half2;
+		if (fib1_half2 + fib2_half2 > 9999999999)
+		{
+			half1 += 1;
+			half2 %= 10000000000;
+		}
+
+		printf("%lu%lu", half1, half2);
+		if (count != 98)
+			printf(", ");
+
+		fib1_half1 = fib2_half1;
+		fib1_half2 = fib2_half2;
+		fib2_half1 = half1;
+		fib2_half2 = half2;
+	}
+	printf("\n");
+	return (0);
 }
