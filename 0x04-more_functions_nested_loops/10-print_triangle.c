@@ -1,22 +1,23 @@
 #include "main.h"
 /**
 *print_triangle - prints triangle
-*@size - argument
+*@size: argument
 *Return: no value
 */
 
 void print_triangle(int size)
 {
-for (int i = 1; i <= size; i++) 
+int i, j;
+for (i = 1; i <= size; i++)
 {
-for (int j = 1; j <= size - i; j++)
+for (j = 1; j <= size - i; j++)
 {
-_putchar(" ");
+_putchar(' ');
 }
 for (int j = 1; j <= i; j++)
 {
-_putcha("#");
+_putcha('#');
 }
-_putchar("\n");
+_putchar('\n');
 }
 }
