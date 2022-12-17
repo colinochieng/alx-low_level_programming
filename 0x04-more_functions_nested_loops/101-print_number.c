@@ -17,7 +17,7 @@ void print_number(int n)
 		interger = -interger;
 	}
 
-	if (interger > 10)
+	if (interger / 10)
 	{
 		print_number(interger / 10);
 	}
