@@ -1,8 +1,17 @@
 #include <stdio.h>
 
+#include <stdio.h>
+/**
+*print_to_98 -function for printing numbers towards 98
+*
+*@n: holding variable
+*
+*Return: no value
+*/
 void print_to_98(int n)
 {
-n <= 98;
+if (n <= 98)
+{
 while(n<=98)
 {
 printf("%d", n);
@@ -13,7 +22,9 @@ putchar(',');
 n++;
 }
 putchar('\n');
-
+}
+else if (n >= 98)
+{
 n >= 98;
 while (n >=98)
 {
@@ -25,16 +36,6 @@ putchar(',');
 
 n--;
 }
-
-putchar('\n');
 }
 
-int main(void)
-{
-print_to_98(0);
-print_to_98(98);
-print_to_98(111);
-print_to_98(81);
-print_to_98(-10);
-return (0);
 }
