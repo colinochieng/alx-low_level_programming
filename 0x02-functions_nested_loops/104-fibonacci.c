@@ -16,22 +16,29 @@ second_num = 1;
 while (rate <= 97)
 {
 value = first_num + second_num;
-printf("%lu", value);
+//printf("%lu", value);
 first_num = second_num;
 second_num = value;
 
-if (rate < 97)
+if (rate < 93)
 {
+printf("%lu", value);
 putchar(',');
 putchar(' ');
 }
-else
-putchar('\n');
-if (rate >= 91 && rate <= 96)
+if (rate >= 93 && rate <= 96)
 {
 putchar('0');
+printf("%lu", value);
+putchar(',');
+putchar(' ');
 }
-
+else if (rate == 97)
+{
+    putchar('0');
+    printf("%lu", value);
+    putchar('\n');
+}
 rate++;
 }
 return (0);
