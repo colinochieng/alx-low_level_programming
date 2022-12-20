@@ -4,7 +4,7 @@
  * print_array - prints array of intergers
  *
  * @a: first parameter
- * @b: second parameter
+ * @n: second parameter
  *
  * Return: no value
  */
