@@ -19,6 +19,5 @@ s[j] = s[rev - j - 1];
 s[rev - j - 1] = i;
 j++;
 }
-_putchar('\n');
 }
 
