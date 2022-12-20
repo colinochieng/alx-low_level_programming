@@ -18,7 +18,7 @@ i = rev / 2;
 
 while (str[i] != '\0')
 {
-putchar(str[i]);
+_putchar(str[i]);
 i++;
 }
 }
@@ -29,11 +29,12 @@ i = (rev / 2) + 1;
 
 while (str[i] != '\0')
 {
-putchar(str[i]);
+_putchar(str[i]);
 i++;
 }
 }
 _putchar(10);
+}
   
 int _strlen(char *s)
 {
