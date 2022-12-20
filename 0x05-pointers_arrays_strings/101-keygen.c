@@ -1,23 +1,28 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 /**
- * main - entry point generates a random password
+ * main - choose random code
  *
- * Return: the generated password
+ * Return: 0
+ *
  */
 int main(void)
 {
-char c;
-int x;
+int passcode;
+char j;
 
-srand(time(0));
-while (x <= 2645)
+srand(time(NULL));
+while (passcode <= 2222)
 {
-c = rand() % 128;
-x += c;
-putchar(c);
+j = rand() % 128;
+passcode = passcode + j;
+putchar(j);
 }
-putchar(2772 - x);
+
 return (0);
+
 }
+
