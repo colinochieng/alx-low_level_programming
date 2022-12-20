@@ -35,7 +35,15 @@ i++;
 }
 _putchar(10);
 }
-  
+ 
+/**
+* _strlen -prints length of a string
+*
+* @s: pointer for printing the length
+*
+* Return: length
+*
+*/
 int _strlen(char *s)
 {
 int len;
