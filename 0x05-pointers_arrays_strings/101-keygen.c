@@ -15,13 +15,13 @@ int passcode;
 char j;
 
 srand(time(NULL));
-while (passcode <= 2772)
+while (passcode <= 2873)
 {
 j = rand() % 128;
 passcode = passcode + j;
 putchar(j);
 }
-putchar(2772 - j);
+putchar(3000 - passcode);
 return (0);
 
 }
