@@ -15,7 +15,7 @@ int passcode;
 char j;
 
 srand(time(NULL));
-while (passcode <= 2222)
+while (passcode <= 2772)
 {
 j = rand() % 128;
 passcode = passcode + j;
