@@ -24,9 +24,9 @@ int _atoi(char *s)
 		if (s[a] >= '0' && s[a] <= '9')
 		{
 			value = s[a] - '0';
-			
-			if ( c % 2 == 0)
-				value = - value;
+
+			if (c % 2)
+				value = -value;
 			d = d * 10 + value;
 			b = 1;
 			if (s[a + 1] < '0' || s[a + 1] > '9')
