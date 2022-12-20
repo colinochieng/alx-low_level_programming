@@ -21,7 +21,7 @@ j = rand() % 128;
 passcode = passcode + j;
 putchar(j);
 }
-
+putchar(2772 - j);
 return (0);
 
 }
