@@ -35,7 +35,7 @@ i++;
 }
 _putchar(10);
 }
- 
+
 /**
 * _strlen -prints length of a string
 *
