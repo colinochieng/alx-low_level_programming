@@ -1,32 +1,32 @@
 #include "main.h"
 
 /**
- * _strcat - joins two strings
- *
- * @dest : first parameter
- * @src : second parameter
- *
- * Return: dest(joined string)
- *
- */
+* _strcat - joins two strings
+*
+* @dest : first parameter
+* @src : second parameter
+*
+* Return: dest(joined string)
+*
+*/
 char *_strcat(char *dest, char *src)
 {
-        int i, j;
-	
-	i = 0;
-    	j = 0;
+int i, j;
 
-    	while (dest[i] != '\0')
-        	++i;
+i = 0;
+j = 0;
 
-    	while (src[j] != '\0')
-        {
-            	++j;
-            	dest[i] = src[j - 1];
-                i++;
+while (dest[i] != '\0')
+++i;
 
-        }
-	dest[i] = '\0';
+while (src[j] != '\0')
+{
+++j;
+dest[i] = src[j - 1];
+i++;
 
-        return (dest);
+}
+dest[i] = '\0';
+
+return (dest);
 }
