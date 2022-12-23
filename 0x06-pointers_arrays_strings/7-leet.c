@@ -25,5 +25,5 @@ s[j] = a[i];
 j++;
 }
 
-return(s);
+return (s);
 }
