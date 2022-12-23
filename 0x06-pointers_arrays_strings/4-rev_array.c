@@ -3,6 +3,7 @@
 * reverse_array - reverse elements of an int array
 *
 *@n: number of elements of the array
+*@a:pointer for the passed parameter
 *Return: no value
 */
 
