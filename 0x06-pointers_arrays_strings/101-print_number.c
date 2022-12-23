@@ -15,7 +15,7 @@ putchar('-');
 int_number = -int_number;
 }
 
-if(int_number / 10)
+if (int_number / 10)
 {
 print_number(int_number / 10);
 }
