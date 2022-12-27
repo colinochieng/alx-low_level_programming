@@ -9,7 +9,7 @@ int64_t largest_factor = 1;
 int64_t i;
 
 int64_t max_factor = (int64_t) sqrt(num);
-for (int64_t i = 2; i <= max_factor; i++) {
+for (i = 2; i <= max_factor; i++) {
 while (num % i == 0) {
 largest_factor = i;
 num /= i;
