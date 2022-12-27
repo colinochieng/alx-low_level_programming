@@ -9,11 +9,11 @@
 int main(void)
 {
 
-int num = 612852475143;
-int largest_factor = 1;
-int i;
+long int num = 612852475143;
+long int largest_factor = 1;
+long int i;
+long int max_factor = sqrt(num);
 
-int max_factor = sqrt(num);
 for (i = 2; i <= max_factor; i++)
 {
 while (num % i == 0)
