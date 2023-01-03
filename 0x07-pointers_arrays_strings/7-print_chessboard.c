@@ -4,7 +4,7 @@
 *@a: pointer to the board
 *Return: no value
 */
-void print_chess_board(char (*a)[8])
+ void print_chessboard(char (*a)[8])
 {
 int m, n;
 
