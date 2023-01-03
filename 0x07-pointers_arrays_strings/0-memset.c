@@ -12,6 +12,6 @@ char *_memset(char *s, char b, unsigned int n)
 unsigned int recur;
 
 for (recur = 0; recur < n ; recur++)
-s[recur] = b; 
+s[recur] = b;
 return (s);
 }
