@@ -12,13 +12,14 @@ while (*s)
 {
 char *j = accept;
 
-while (*j) {
+while (*j)
+{
 if (*s == *j)
-return s;
+return (s);
 
 j++;
 }
 s++;
 }
-  return NULL;
+return (NULL);
 }
