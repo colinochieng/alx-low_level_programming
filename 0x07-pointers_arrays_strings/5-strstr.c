@@ -25,8 +25,8 @@ if (haystack[m + n] != needle[n])
 break;
 }
 
-if (needle[m] == '\0')
-return (&haystack[n]);
+if (needle[n] == '\0')
+return (&haystack[m]);
 }
 }
 
