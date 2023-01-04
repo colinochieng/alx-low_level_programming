@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-*print_chess_board - outputs chess board
+*print_chessboard - outputs chess board
 *@a: pointer to the board
 *Return: no value
 */
- void print_chessboard(char (*a)[8])
+void print_chessboard(char (*a)[8])
 {
 int m, n;
 
