@@ -15,6 +15,8 @@ if (s[m] == c)
 return (s + m);
 m++;
 }
+if (s[m] == c)
+return (s + m);
 
 return (NULL);
 }
