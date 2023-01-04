@@ -12,23 +12,20 @@
 char *_strstr(char *haystack, char *needle)
 {
 int m, n;
-
-for (m = 0; haystack[m] != '\0'; m++)
+m = 0;
+while (haystack[m] != '\0')
 {
-
-if (haystack[m] == needle[0])
+n = 0;
+while (needle[n] != '\0')
 {
-for (n = 0; needle[n] != '\0'; n++)
-{
-
 if (haystack[m + n] != needle[n])
 break;
+n++;
 }
-
-if (needle[n] == '\0')
+if (!needle[n])
 return (&haystack[m]);
-}
+m++;
 }
 
-return (NULL);
+return (0);
 }
