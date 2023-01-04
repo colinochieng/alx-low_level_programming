@@ -30,5 +30,5 @@ return (&haystack[m]);
 }
 }
 
-return (0);
+return (NULL);
 }
