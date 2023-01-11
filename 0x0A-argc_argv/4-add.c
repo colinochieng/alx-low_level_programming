@@ -23,26 +23,24 @@ int main(int argc, char *argv[])
 	{
 		while (recall < argc)
 		{
-			if (!isdigit(argv[recall]))
+			i = 0;
+			while (argv[recall][i] != '\0')
 			{
+				if (!isdigit(argv[recall][i]))
+				{
+        				printf("Error\n");
+        				return (1);
+   			 	}
+				
+				else
 				total += atoi(argv[recall]);
+				i++;
 			}
-
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
-			recall++;
-		}
-
 		printf("%d\n", total);
-		return (0);
 	}
 	else
 	{
 		printf("%d\n", 0);
-		return (0);
 	}
-	
+	return (0);
 }
