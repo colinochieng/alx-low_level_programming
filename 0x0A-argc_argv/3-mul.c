@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int recall = 1;
 	int product = 1;
 
-	if (argc > 1)
+	if (argc > 2)
 	{
 		while (recall < argc)
 		{
