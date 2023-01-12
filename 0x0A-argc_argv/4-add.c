@@ -32,8 +32,6 @@ if (!isdigit(argv[recall][i]))
 printf("Error\n");
 return (1);
 }
-
-else
 total += atoi(argv[recall]);
 i++;
 }
