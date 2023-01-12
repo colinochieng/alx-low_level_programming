@@ -14,9 +14,8 @@ char *_strdup(char *str)
 	int len = _strlen_recursion(str);
 	int i;
 	char *s = malloc(len);
-	if (str == NULL)
-		return (NULL);
-	if (s == 0)
+
+	if (s == NULL)
 		return (NULL);
 	i = 0;
 	while (i < len)
