@@ -16,19 +16,19 @@ int main(int argc, char *argv[])
 	int change = 0;
 	int rem = 0;
 	int i;
-	
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	
+
 	if (atoi(argv[1]) < 0)
 	{
 		printf("%d\n", 0);
 		return (0);
 	}
-	
+
 	i = atoi(argv[1]);
 	change += i / 25;
 	rem = i % 25;
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	change += rem / 2;
 	rem %= 2;
 	change += rem / 1;
-	
+
 	printf("%d\n", change);
 	return (0);
 }
