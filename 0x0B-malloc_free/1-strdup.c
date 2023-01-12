@@ -1,19 +1,20 @@
 #include "main.h"
 #include <stdlib.h>
+
+int _strlen_recursion(char *s);
+
 /**
 *_strdup - returns a pointer to a newly allocated space in memory
 *which contains a copy of the string given as a parameter
 *@str: string pointer
 *Return: NULL or string pointer
 */
-int _strlen_recursion(char *s);
-
 char *_strdup(char *str)
 {
 	int len = _strlen_recursion(str);
 	int i;
 	char *s = malloc(len);
-	
+
 	if (s == 0)
 		return (NULL);
 	i = 0;
