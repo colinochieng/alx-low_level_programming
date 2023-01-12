@@ -35,6 +35,7 @@ return (1);
 i++;
 }
 total += atoi(argv[recall]);
+recall++;
 }
 printf("%d\n", total);
 }
