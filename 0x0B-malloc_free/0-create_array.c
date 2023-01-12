@@ -13,21 +13,21 @@ char *create_array(unsigned int size, char c)
 {
 	unsigned int iter;
 	char *ch_ptr;
-	
-	
+
+
 	if (size == 0)
-		return (NULL);
+		return (0);
 	
 	ch_ptr = malloc(sizeof(char) * size);
 	if (ch_ptr == 0)
-		return (NULL);
-	
+		return (0);
+
 	while (iter < size)
 	{
 		ch_ptr[iter] = c;
 		iter++;
 	}
-	
+
 	return (ch_ptr);
 }
 	
