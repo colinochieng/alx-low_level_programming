@@ -6,6 +6,7 @@
 *@str: string pointer
 *Return: NULL or string pointer
 */
+int _strlen_recursion(char *s);
 
 char *_strdup(char *str)
 {
