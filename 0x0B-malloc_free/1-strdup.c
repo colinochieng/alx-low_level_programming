@@ -13,9 +13,13 @@ char *_strdup(char *str)
 {
 	int len = _strlen_recursion(str);
 	int i;
-	char *s = malloc(len + 1);
-
+	char *s;
 	if (str == NULL)
+		return (NULL);
+
+	s = malloc(len + 1);
+
+	if (s == 0)
 		return (NULL);
 	i = 0;
 	while (i < len)
