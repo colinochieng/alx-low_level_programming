@@ -32,9 +32,9 @@ if (!isdigit(argv[recall][i]))
 printf("Error\n");
 return (1);
 }
-total += atoi(argv[recall]);
 i++;
 }
+total += atoi(argv[recall]);
 }
 printf("%d\n", total);
 }
