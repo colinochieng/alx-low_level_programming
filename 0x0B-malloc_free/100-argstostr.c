@@ -14,7 +14,7 @@ char *argstostr(int ac, char **av)
 {
 	char *args_concat;
 	int i, j, k, len, value;
-	
+
 	i = k = len = value = 0;
 	j = ac;
 
@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 
 	if (args_concat != NULL)
 	{
-		for (k = 0;k < j; k++)
+	for (k = 0; k < j; k++)
 		{
 			for (i = 0; av[k][i] != '\0'; i++)
 				args_concat[i + value] = av[k][i];
