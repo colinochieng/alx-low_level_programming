@@ -37,6 +37,7 @@ return (NULL);
 for (recall = 0; recall < i; recall++)
 s[recall] = s1[recall];
 
+recall = 0;
 while (recall < j)
 {
 s[recall + i] = s2[recall];
