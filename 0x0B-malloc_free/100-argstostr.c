@@ -13,7 +13,7 @@ int _strlen_recursion(char *s);
 char *argstostr(int ac, char **av)
 {
 	char *args_concat;
-	int i, j, k, total, value;
+	int i, j, k, len, value;
 	
 	i = k = len = value = 0;
 	j = ac;
@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 			for (i = 0; av[k][i] != '\0'; i++)
 				args_concat[i + value] = av[k][i];
 			args_concat[value + i] = '\n';
-			temp += (i + 1);
+			value += (i + 1);
 		}
 		args_concat[value] = '\0';
 	}
