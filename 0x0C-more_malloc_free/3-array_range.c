@@ -11,23 +11,22 @@
 
 int *array_range(int min, int max)
 {
-	int *s, recall;
-	int array_extent = ((max - min) + 1);
+int *s, recall;
+int array_extent = ((max - min) + 1);
 
-	if (max < min)
-		return (NULL);
+if (max < min)
+return (NULL);
 
-	
-	s = malloc(sizeof(int) * array_extent);
-	if (s == NULL)
-		return (NULL);
+s = malloc(sizeof(int) * array_extent);
+if (s == NULL)
+return (NULL);
 
-	recall = 0;
-  while (recall < array_extent)
-  {
-    s[i] = min++;
-    i++;
-  }
+recall = 0;
+while (recall < array_extent)
+{
+s[recall] = min++;
+recall++;
+}
 
-	return (s);
+return (s);
 }
