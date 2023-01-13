@@ -12,7 +12,7 @@ char *_memset(char *s, char b, unsigned int n);
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *s;
+	char *s;
 	int mem_size = size * nmemb;
 
 	if (!nmemb || !size)
