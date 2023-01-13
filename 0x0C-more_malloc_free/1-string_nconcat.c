@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
 
+int len_of_str(char *s);
+
 /**
 * string_nconcat - Concatenates 2 strings using n number of bytes
 * @s1: string one
@@ -32,7 +34,7 @@ s = malloc(sizeof(char) * (i + j + 1));
 if (s == NULL)
 return (NULL);
 
-for (recall = 0; recall < len1; recall++)
+for (recall = 0; recall < i; recall++)
 s[recall] = s1[recall];
 
 while (recall < j)
