@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 char *_memset(char *s, char b, unsigned int n);
 
@@ -16,13 +17,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (!nmemb || !size)
 		return (NULL);
-  
+
 	s = malloc(mem_size);
 	if (!s)
 		return (NULL);
-  
+
 	_memset(s, 0, mem_size);
- 
+
   	return (s);
 }
 
