@@ -21,7 +21,7 @@ int i, j = 0;
 
 ptr1 = argv[1];
 ptr2 = argv[2];
-if (argc != 3 || !if_num(s1) || !if_num(s2))
+if (argc != 3 || !if_num(ptr1) || !if_num(ptr2))
 {
 printf("Error\n");
 exit(98);
@@ -38,12 +38,12 @@ for (i = 0; i <= size1; i++)
 mem[i] = 0;
 for (len1 = len1 - 1; len1 >= 0; len1--)
 {
-num1 = s1[len1] - '0';
+num1 = ptr1[len1] - '0';
 value = 0;
-for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
+for (len2 = _stringlen(ptr2) - 1; len2 >= 0; len2--)
 {
-num2 = s2[len2] - '0';
-carry += mem[size2] + (num1 * num2);
+num2 = ptr2[len2] - '0';
+value += mem[size2] + (num1 * num2);
 mem[size2] = value % 10;
 value /= 10;
 }
