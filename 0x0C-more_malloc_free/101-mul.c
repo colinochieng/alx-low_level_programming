@@ -15,7 +15,7 @@ int if_num(char *s);
 int main(int argc, char *argv[])
 {
 int  num1, num2, len1, len2;
-int size1, size2, value;
+int size1, size2, value, index;
 char *ptr1, *ptr2, *mem;
 int i, j = 0;
 
@@ -43,12 +43,13 @@ value = 0;
 for (len2 -= 1; len2 >= 0; len2--)
 {
 num2 = ptr2[len2] - '0';
-value += mem[size2] + (num1 * num2);
-mem[size2] = value % 10;
+index = len1 + len2 + 1;
+value += mem[index] + (num1 * num2);
+mem[index] = value % 10;
 value /= 10;
 }
 if (value > 0)
-mem[size2] += value;
+mem[index] += value;
 }
 for (i = 0; i < size2 - 1; i++)
 {
