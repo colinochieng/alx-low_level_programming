@@ -12,7 +12,8 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-void *s, *m, *n;
+void *s, *n;
+int *m;
 unsigned int iter;
 
 if (new_size == 0 && ptr != NULL)
@@ -38,7 +39,7 @@ if (s == NULL)
 return (NULL);
 
 iter = 0;
-while (iter < old_size && i < new_size)
+while (iter < old_size && iter < new_size)
 {
 m = (char *) s;
 n = (char *) ptr;
