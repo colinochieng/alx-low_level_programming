@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "main.h"
 
 int _stringlen(char *str);
 int if_num(char *s);
