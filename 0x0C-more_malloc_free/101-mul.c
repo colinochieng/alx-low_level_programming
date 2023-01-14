@@ -36,11 +36,11 @@ if (!mem)
 return (1);
 for (i = 0; i <= size1; i++)
 mem[i] = 0;
-for (len1 = len1 - 1; len1 >= 0; len1--)
+for (len1 -= 1; len1 >= 0; len1--)
 {
 num1 = ptr1[len1] - '0';
 value = 0;
-for (len2 = _stringlen(ptr2) - 1; len2 >= 0; len2--)
+for (len2 -= 1; len2 >= 0; len2--)
 {
 num2 = ptr2[len2] - '0';
 value += mem[size2] + (num1 * num2);
