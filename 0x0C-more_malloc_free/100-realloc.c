@@ -12,8 +12,7 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-void *s, *n;
-int *m;
+char *s;
 unsigned int iter;
 
 if (new_size == 0 && ptr != NULL)
@@ -41,9 +40,7 @@ return (NULL);
 iter = 0;
 while (iter < old_size && iter < new_size)
 {
-m = (char *) s;
-n = (char *) ptr;
-m[iter] = n[iter];
+*((char *)s + iter) = *((char *)ptr + iter);
 iter++;
 }
 
