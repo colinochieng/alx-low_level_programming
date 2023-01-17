@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int strleng(char *s);
-int copypa(char *s1, char *s2);
+char *copypa(char *s1, char *s2);
 
 /**
 *new_dog - a function that creates a new dog
@@ -70,7 +70,7 @@ int strleng(char *s)
 *Return: copied string
 */
 
-int copypa(char *s1, char *s2)
+char *copypa(char *s1, char *s2)
 {
 	int i = 0;
 
