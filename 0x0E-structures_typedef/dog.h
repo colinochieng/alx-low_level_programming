@@ -4,7 +4,7 @@
 *struct dog - describe a dog
 *@name: name of dog
 *@owner: dog owner
-*age: the dogs age
+*@age: the dogs age
 */
 
 struct dog
