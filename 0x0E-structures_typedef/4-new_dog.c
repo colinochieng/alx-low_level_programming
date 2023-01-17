@@ -1,4 +1,6 @@
 #include "dog.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 int strleng(char *s);
 int copypa(char *s1, char *s2);
