@@ -7,3 +7,4 @@ Documentation: structures
 typedef
 Programming in C by Stephen Kochan - Chapter 8, Working with Structures p163-189
 The Lost Art of C Structure Packing
+https://intranet.alxswe.com/rltoken/giS4eNQT2BQ9RLK0PMhgJQ
