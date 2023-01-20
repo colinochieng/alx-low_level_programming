@@ -10,7 +10,7 @@ char *cap_string(char *str)
 {
 int i, j;
 /* Declaring a string of word separators*/
-char punc[13] = {' ', ',', '.','"','?', '(','(', '\t','\n', '{', '}', ';'};
+char punc[13] = {' ', ',', '.', '"', '?', '(', '(', '\t', '\n', '{', '}', ';'};
 
 for (i = 0; str[i] != '\0'; i++)
 {
@@ -23,7 +23,7 @@ while (j < 13)
 {
 if (str[i] == punc[j])
 {
-if(str[i + 1] >= 97 && str[i + 1] <= 122)
+if (str[i + 1] >= 97 && str[i + 1] <= 122)
 str[i + 1] -= 32;
 }
 j++;
