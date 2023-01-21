@@ -12,7 +12,7 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	size_t i;
-	char* ptr_va;
+	char *ptr_va;
 
 	va_list str;
 
