@@ -47,5 +47,5 @@ i++;
 }
 }
 printf("\n");
-va_end(arguments);
+va_end(vaarg);
 }
