@@ -1,7 +1,7 @@
-https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/229/giphy-3.gif
+<img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/229/giphy-3.gif" alt="Alt text" title="Optional title">
 Resources
 Read or watch:
-
+https://intranet.alxswe.com/concepts/120
 Linked Lists
 Google
 Youtube
