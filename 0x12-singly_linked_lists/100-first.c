@@ -1,4 +1,4 @@
-#include "lists.h}"
+#include "lists.h"
 /**
 *before_main - prints before main execution
 *Return: void
