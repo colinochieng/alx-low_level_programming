@@ -9,18 +9,16 @@
 
 int pop_listint(listint_t **head)
 {
-	listint_t *traverse;
+    listint_t *traverse;
 
-	if (*head == NULL)
-		return (0);
+    if (*head == NULL)
+        return (0);
 
-	traverse = *head;
-	free(*head);
+    traverse = *head;
+    free(*head);
 
-	while (traverse != NULL)
-	{
-		traverse = traverse->next;
-		return (traverse->n);
-	}
+    *head = traverse->next;
+    return (traverse->n);
 }
+
 	
