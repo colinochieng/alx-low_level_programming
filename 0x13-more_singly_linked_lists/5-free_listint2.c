@@ -1,7 +1,8 @@
-#include "list.h"
+#include "lists.h"
 
 /**
-*a function that frees a listint_t list
+*free_listint2 - a function that frees a listint_t list
+*@head: pointer to list template
 *function sets the head to NULL
 *Return: void
 */
