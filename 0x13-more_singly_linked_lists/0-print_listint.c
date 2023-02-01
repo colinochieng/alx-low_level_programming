@@ -14,7 +14,7 @@ size_t print_listint(const listint_t *h)
 	print = (listint_t *) h;
 
 /*Traversing to print all data in the list*/
-	while(print != NULL)
+	while (print != NULL)
 	{
 		printf("%d\n", print->n);
 		print = print->next;
