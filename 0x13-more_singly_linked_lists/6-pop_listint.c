@@ -14,7 +14,7 @@ int pop_listint(listint_t **head)
 	if (*head == NULL)
 		return (0);
 
-	traverse = head;
+	traverse = *head;
 	free(*head);
 
 	while (traverse != NULL)
@@ -22,4 +22,5 @@ int pop_listint(listint_t **head)
 		traverse = traverse->next;
 		return (traverse->n);
 	}
+}
 	
