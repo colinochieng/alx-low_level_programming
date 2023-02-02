@@ -4,7 +4,7 @@
 *get_nodeint_at_index - finds nth node in a list
 *@head: pointer to list template
 *@index: position of the nth node
-*Return:  returns the nth node of a listint_t linked list or 
+*Return:  returns the nth node of a listint_t linked list or
 *if the node does not exist, return NULL
 */
 
