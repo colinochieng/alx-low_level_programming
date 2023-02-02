@@ -22,12 +22,9 @@ return (NULL);
 insertint->n = n;
 insertint->next = NULL;
 
-if (*head == NULL)
-return (NULL);
-
 if (idx == 0)
 {
-insertint = *head;
+insertint->next = *head;
 *head = insertint;
 return (insertint);
 }
