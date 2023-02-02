@@ -5,7 +5,7 @@
 *@head: pointer to a list template
 *@idx: is the index of the list where the new node should be added
 *@n: interger
-*Returns: the address of the new node, or NULL if it failed
+*Return: the address of the new node, or NULL if it failed
 *if it is not possible to add the new node at index idx
 */
 
