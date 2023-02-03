@@ -16,25 +16,27 @@ char *argstostr(int ac, char **av)
 	int i, j, k, len, value;
 
 	i = k = len = value = 0;
-	j = ac;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
+	i = 0;
 
-	while (ac--)
-		len += (_strlen_recursion(av[ac]) + 1);
-	args_concat = (char *) malloc(len + 1);
+	while (i < ac)
+	{
+		len += (_strlen_recursion(av[i]));
+		i++;
+	}
+	args_concat = (char *) malloc(len * sizeof(char));
 
 	if (args_concat != NULL)
 	{
-	for (k = 0; k < j; k++)
+	for (k = 0, i = 0; i < ac; i++)
 		{
-			for (i = 0; av[k][i] != '\0'; i++)
-				args_concat[i + value] = av[k][i];
-			args_concat[value + i] = '\n';
-			value += (i + 1);
+			for (j = 0; j < _strlen_recursion(av[i]); j++, k++)
+				args_concat[k] = av[i][j];
+			args_concat[k++] = '\n';
 		}
-		args_concat[value] = '\0';
+		args_concat[len - 1] = '\0';
 	}
 	else
 	{
