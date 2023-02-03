@@ -13,9 +13,9 @@ int _strlen_recursion(char *s);
 char *argstostr(int ac, char **av)
 {
 	char *args_concat;
-	int i, j, k, len, value;
+	int i, j, k, len;
 
-	i = k = len = value = 0;
+	i = k = len = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -26,6 +26,8 @@ char *argstostr(int ac, char **av)
 		len += (_strlen_recursion(av[i]));
 		i++;
 	}
+	
+	len += ac;
 	args_concat = (char *) malloc(len * sizeof(char));
 
 	if (args_concat != NULL)
