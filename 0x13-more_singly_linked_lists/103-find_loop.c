@@ -15,7 +15,7 @@ listint_t *find_listint_loop(listint_t *head)
 	locate = head->next;
 	traverse = (head->next)->next;
 
-	while (search)
+	while (traverse)
 	{
 		if (locate == traverse)
 		{
