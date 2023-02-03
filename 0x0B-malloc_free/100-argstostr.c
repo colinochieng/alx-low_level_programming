@@ -38,6 +38,7 @@ char *argstostr(int ac, char **av)
 				args_concat[k] = av[i][j];
 			args_concat[k++] = '\n';
 		}
+		args_concat[len - 2] = '\n';
 		args_concat[len - 1] = '\0';
 	}
 	else
