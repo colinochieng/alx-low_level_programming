@@ -8,22 +8,8 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned int base = 1, value = n;
-	int len;
+	if (n > 1)
+		print_binary(n >> 1);
 
-	for (len = 0; value > 1; len++)
-		value >>= 1;
-
-	if (len > 0)
-		base <<= len;
-
-	while (base > 0)
-	{
-		if (n & base)
-			_putchar('1');
-		else
-			_putchar('0');
-		base >>= 1;
-	}
-
+	_putchar((n & 1) + '0');
 }
