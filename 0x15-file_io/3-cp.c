@@ -12,7 +12,7 @@ void close_file(int fd)
 
 	if (shut == -1)
 	{
-		printf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	}
 
 	scan = read(file_from, buf, 1024);
-	note = write (file_to, buf, scan);
+	note = write(file_to, buf, scan);
 /*if write to file_to fails*/
 	if (note != scan)
 	{
@@ -66,4 +66,3 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
-	
