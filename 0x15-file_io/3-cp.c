@@ -53,12 +53,16 @@ int main(int argc, char *argv[])
 	}
 
 	scan = read(file_from, buf, 1024);
-	note = write(file_to, buf, scan);
-/*if write to file_to fails*/
-	if (note != scan)
+
+	while (scan > 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		note = write(file_to, buf, scan);
+		/*if write to file_to fails*/
+		if (note != scan)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 	}
 
 	close_file(file_from);
