@@ -3,19 +3,22 @@
 char *_memcpy(char *dest, char *src, unsigned int n);
 
 /**
+*strtow - function that splits a string into words.
+*@str: sting to be spilted
 *Return: NULL if str == NULL or str == ""
 */
 
-char** strtow(char *str)
+char **strtow(char *str)
 {
 	int count = 0;
 	int i, j;
 	int start = 0;
 	int end;
+	char **result;
 
-    	if (str == NULL || str[0] == '\0')
-		return NULL;
-    
+	if (str == NULL || str[0] == '\0')
+		return (NULL);
+
 /*counting no of space to determine number of words*/
 	for (i = 0; str[i]; i++)
 	{
@@ -23,7 +26,7 @@ char** strtow(char *str)
 			count++;
 	}
 
-	char **result = (char**) malloc((count + 1) * sizeof(char*));
+	result = (char **) malloc((count + 1) * sizeof(char*));
 
 	j = 0;
 
@@ -38,17 +41,16 @@ char** strtow(char *str)
 				end = i + 1;
 			}
 
-			result[j] = (char*) malloc((end - start + 1) * sizeof(char));
+			result[j] = (char *) malloc((end - start + 1) * sizeof(char));
 			_memcpy(result[j], &str[start], end - start);
 			result[j][end - start] = '\0';
 			j++;
 			start = i + 1;
 		}
-	}mam is coming
+	}
 
     result[j] = NULL;
-
-    return result;
+    return (result);
 }
 /**
 *_memcpy - function that copies memory location
