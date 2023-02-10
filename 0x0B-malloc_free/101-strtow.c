@@ -26,7 +26,7 @@ char **strtow(char *str)
 			count++;
 	}
 
-	result = (char **) malloc((count + 1) * sizeof(char*));
+	result = (char **) malloc((count + 1) * sizeof(char *));
 
 	j = 0;
 
@@ -49,8 +49,8 @@ char **strtow(char *str)
 		}
 	}
 
-    result[j] = NULL;
-    return (result);
+	result[j] = NULL;
+	return (result);
 }
 /**
 *_memcpy - function that copies memory location
