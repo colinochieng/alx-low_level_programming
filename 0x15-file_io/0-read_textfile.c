@@ -24,17 +24,24 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	verify = open(filename, O_RDONLY);
 
-	count = read(verify, buf, letters);
-	print = write(1, buf, count);
-
-	if (verify == -1 || count == -1 || print == -1 || print != count)
+	if (verify == -1)
 	{
 		free(buf);
 		return (0);
 	}
+
+	count = read(verify, buf, letters);
+	print = write(1, buf, count);
+
+	if (count == -1 || print == -1 || print != count)
+	{
+		free(buf);
+		close(verify);
+		return (0);
+	}
 	
-	free(buf);
 	close(verify);
+	free(buf);
 
 	return (print);
 }
