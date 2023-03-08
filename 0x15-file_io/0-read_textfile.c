@@ -30,14 +30,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	count = read(verify, buf, letters);
-	print = write(1, buf, count);
-
-	if (count == -1 || print == -1 || print != count)
+	while((count = read(verify, buf, letters)) > 0)
 	{
-		free(buf);
-		close(verify);
-		return (0);
+		print = write(1, buf, count);
+
+		if (count == -1 || print == -1 || print != count)
+		{
+			free(buf);
+			close(verify);
+			return (0);
+		}
 	}
 
 	close(verify);
