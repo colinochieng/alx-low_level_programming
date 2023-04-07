@@ -9,6 +9,7 @@
 *value must be duplicated. value can be an empty string
 *First checks for empty pointers
 *Then computes the key index
+*Return: 1 if success, 0 otherwise
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
