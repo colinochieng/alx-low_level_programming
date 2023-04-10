@@ -121,7 +121,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	idx = key_index((const unsigned char *)key, ht->size);
 
 	curr_node = ht->shead;
-	while(curr_node != NULL)
+	while (curr_node != NULL)
 	{
 		if (strcmp(curr_node->key, key) == 0)
 		{
