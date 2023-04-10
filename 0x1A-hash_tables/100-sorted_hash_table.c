@@ -25,7 +25,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 	}
 
 	for (idx = 0; idx < size; idx++)
-		table->array[i] = NULL;
+		table->array[idx] = NULL;
 	table->size = size;
 	table->shead = NULL;
 	table->stail = NULL;
@@ -39,7 +39,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 */
 unsigned long int key_gen(const char *str, shash_table_t *ht)
 {
-	unsigned long int digest = hash_djb2(str);
+	unsigned long int digest = hash_djb2((const unsigned char *)str);
 	return (digest % ht->size);
 }
 
@@ -49,7 +49,7 @@ unsigned long int key_gen(const char *str, shash_table_t *ht)
  * @value: value of key
  * Return: new shash_node_t
 */
-shash_node_t *new_node_t(char *key, char *value)
+shash_node_t *new_node_t(const char *key, char *value)
 {
 	shash_node_t *new = malloc(sizeof(shash_node_t));
 
@@ -79,7 +79,7 @@ shash_node_t *new_node_t(char *key, char *value)
  * @node_t: new node
 */
 
-void set_ord_list(shash_table_t *ht, shash_node_t *node_t)
+void set_ord_list(shash_table_t *ht, shash_node_t *node_t, const char *key)
 {
 
 	shash_node_t *temp;       
@@ -145,7 +145,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	new_node->next = ht->array[key_gen(key, ht)];
 	ht->array[key_gen(key, ht)] = new_node;
 
-	set_ord_list(ht, new_node);
+	set_ord_list(ht, new_node, key);
 	return (1);
 }
 
