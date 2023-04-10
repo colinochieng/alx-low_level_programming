@@ -37,7 +37,7 @@ shash_table_t *shash_table_create(unsigned long int size)
  * @key: string to be used for index generation
  * Return: index
 */
-unsigned long int key_gen(const char *str, shash_table_t *ht)
+unsigned long int key_gen(const char *str, const shash_table_t *ht)
 {
 	unsigned long int digest = hash_djb2((const unsigned char *)str);
 	return (digest % ht->size);
@@ -158,7 +158,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
-	hash_node_t *temp;
+	shash_node_t *temp;
 
 	/*Check for Null pointers*/
 	if (!ht || !key || *key == '\0')
