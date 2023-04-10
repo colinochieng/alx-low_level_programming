@@ -33,17 +33,6 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
- * key_gen - generates the index
- * @key: string to be used for index generation
- * Return: index
-*/
-unsigned long int key_gen(const char *str, const shash_table_t *ht)
-{
-	unsigned long int digest = hash_djb2((const unsigned char *)str);
-	return (digest % ht->size);
-}
-
-/**
  * new_node_t - creates new shash_node_t
  * @key: key string
  * @value: value of key
@@ -76,13 +65,13 @@ shash_node_t *new_node_t(const char *key, char *value)
 /**
  * set_ord_list - sets elements at the ordered list
  * @ht: table
+ * @key: key
  * @node_t: new node
 */
 
 void set_ord_list(shash_table_t *ht, shash_node_t *node_t, const char *key)
 {
-
-	shash_node_t *temp;       
+	shash_node_t *temp;
 	/*Add at front of the sorted doubly-linked list*/
 	if (ht->shead == NULL)
 	{
@@ -121,6 +110,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	char *dup_val;
 	shash_node_t *curr_node, *new_node;
+	unsigned long int idx;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
@@ -128,7 +118,9 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 	if (dup_val == NULL)
 		return (0);
-	curr_node = ht->array[key_gen(key, ht)];
+	idx = key_index((const unsigned char *)key, ht->size);
+
+	curr_node = ht->shead;
 	while(curr_node != NULL)
 	{
 		if (strcmp(curr_node->key, key) == 0)
@@ -137,13 +129,14 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 			curr_node->value = dup_val;
 			return (1);
 		}
+		curr_node = curr_node->next;
 	}
 	new_node = new_node_t(key, dup_val);
 
 	if (new_node == NULL)
 		return (0);
-	new_node->next = ht->array[key_gen(key, ht)];
-	ht->array[key_gen(key, ht)] = new_node;
+	new_node->next = ht->array[idx];
+	ht->array[idx] = new_node;
 
 	set_ord_list(ht, new_node, key);
 	return (1);
@@ -158,12 +151,17 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
+	unsigned long int idx;
 	shash_node_t *temp;
 
 	/*Check for Null pointers*/
 	if (!ht || !key || *key == '\0')
 		return (NULL);
-	temp = ht->array[key_gen(key, ht)];
+	idx = key_index((const unsigned char *)key, ht->size);
+
+	if (idx >= ht->size)
+		return (NULL);
+	temp = ht->shead;
 
 	while (temp != NULL)
 	{
