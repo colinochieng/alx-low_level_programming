@@ -22,11 +22,11 @@ void print_buffer(char *b, int size)
 			j = size - i;
 		else
 			j = 10;
-		printf("%08X: ", i);
+		printf("%08x: ", i);
 
 		for (k = 0; k < 10; k++)
 		{
-			k < j ? printf("%02X", b[i + k]) : printf("  ");
+			k < j ? printf("%02x", b[i + k]) : printf("  ");
 
 			if (k % 2)
 				printf(" ");
