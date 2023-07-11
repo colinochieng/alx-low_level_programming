@@ -1,21 +1,21 @@
 #include "search_algos.h"
 
 /**
- * print_array: function to print ratio of an array
+ * print_array - function to print ratio of an array
  * @start: starting point
  * @end: ending point
  * @array: pointer tonthe first element of an array
 */
 void print_array(int *array, int start, int end)
 {
-        while (start <= end)
-        {
-                if (start != end)
-                        printf("%d, ", array[start]);
-                else
-                        printf("%d\n", array[start]);
-                start++;
-        }
+	while (start <= end)
+	{
+		if (start != end)
+			printf("%d, ", array[start]);
+		else
+			printf("%d\n", array[start]);
+		start++;
+	}
 }
 
 /**
@@ -30,22 +30,22 @@ void print_array(int *array, int start, int end)
 */
 int binary_search(int *array, size_t size, int value)
 {
-        size_t low = 0, high = size - 1;
-        size_t mid = 0;
+	size_t low = 0, high = size - 1;
+	size_t mid = 0;
 
-        if (!array)
-                return (-1);
-        while (low <= high)
-        {
-                mid = (low + high) / 2;
-                printf("Searching in array: ");
-                print_array(array, low, high);
-                if (array[mid] == value)
-                        return ((int) mid);
-                else if (array[mid] < value)
-                        low = mid + 1;
-                else
-                        high = mid - 1;       
-        }
-        return (-1);
+	if (!array)
+		return (-1);
+	while (low <= high)
+	{
+		mid = (low + high) / 2;
+		printf("Searching in array: ");
+		print_array(array, low, high);
+		if (array[mid] == value)
+			return ((int) mid);
+		else if (array[mid] < value)
+			low = mid + 1;
+		else
+			high = mid - 1;
+	}
+	return (-1);
 }
